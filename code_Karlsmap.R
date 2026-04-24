@@ -68,27 +68,6 @@ p <- ggplot(sweden_joined) +
 
 p
 
-library(dplyr)
-setwd("~/Library/CloudStorage/OneDrive-LundUniversity/Daria/MPH/Thesis/Draft thesis_UPDATED")
-getwd()
-
 
 ggsave("Karls_plot2_20260424.png", plot = p, width = 8, height = 6, dpi = 300)
 
-()
-unlink("~/.rsconnect", recursive = TRUE)
-
-rsconnect::setAccountInfo(
-  name = "DariaVaccari",
-  token = "YOUR_TOKEN",
-  secret = "YOUR_SECRET"
-)
-
-rsconnect::deployApp("Karls_plot_20260424.png")
-
-
-rsconnect::publishRpubs("Karls_plot_20260424.png")
-
-git add Karls_plot2_20260424.png
-git commit -m "Add map figure"
-git push origin main
